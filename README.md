@@ -8,4 +8,4 @@ docker build -t training_server . - собрать
 "-p" - порт
 "--name" - назвать контейнер
 
-docker run -d -p 3000:3000 training_server - запустить
+docker run -d -p 3000:3000 --name node_server training_server - запустить

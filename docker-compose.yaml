@@ -1,0 +1,18 @@
+services:
+  # server:
+  #   build: .
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     PASSWORD: "test"
+  db:
+    # image: postgres:14.3-alpine
+    image: postgres:14.2
+    restart: always
+    container_name: db
+    environment:
+      POSTGRES_USER: ialiev
+      POSTGRES_PASSWORD: ialiev
+      POSTGRES_DB: my_crm
+    ports:
+      - "5432:5432"

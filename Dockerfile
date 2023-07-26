@@ -4,4 +4,4 @@ COPY package.json /app
 RUN yarn install
 COPY . .
 CMD ["node", "build/index.js"]
-EXPOSE 3000
+EXPOSE 8000

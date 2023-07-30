@@ -1,10 +1,5 @@
-import { Pool } from "pg";
+import { PrismaClient } from "@prisma/client";
 
-const pool = new Pool({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-});
+const prismaQuery = new PrismaClient();
 
-export const query = (text: string, params: string[] | number[]) =>
-  pool.query(text, params);
+export { prismaQuery };

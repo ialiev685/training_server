@@ -1,0 +1,1 @@
+class GeneralError extends Error {}

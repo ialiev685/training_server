@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { Controller } from "../controller";
+
 const router = Router();
 
 // middleware
@@ -9,6 +10,8 @@ router.use((req, res, next) => {
 });
 router.get("/links", Controller.getLink);
 
-router.post("/links", Controller.addLink);
+router.get("/links/:name", Controller.addLink);
+
+router.get("/links/update/:name", Controller.updateLink);
 
 export { router };
